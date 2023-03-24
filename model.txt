@@ -125,18 +125,18 @@ model{
     # PREDICTION
     #---------------------------------------------#
 
-    for (i in 0:50){
-        logit(pa_pred_pl[i+1]) <- pa_intercept + pa_beta_pl + pa_TSD_pl * tpred_pl[i] + pa_TSD2_pl * (tpred_pl[i] ** 2)
-        logit(pa_pred_l[i+1]) <- pa_intercept + pa_beta_l + pa_TSD_l * tpred_l[i] + pa_TSD2_l * (tpred_l[i] ** 2)
-        log(nb_pred_pl[i+1]) <- nb_intercept + nb_beta_pl + nb_TSD_pl * tpred_pl[i] + nb_TSD2_pl * (tpred_pl[i] ** 2)
-        log(nb_pred_l[i+1]) <- nb_intercept + nb_beta_l + nb_TSD_l * tpred_l[i] + nb_TSD2_l * (tpred_l[i] ** 2)
+    for (i in 1:50){
+        logit(pa_pred_pl[i]) <- pa_intercept + pa_beta_pl + pa_TSD_pl * tpred_pl[i] + pa_TSD2_pl * (tpred_pl[i] ** 2)
+        logit(pa_pred_l[i]) <- pa_intercept + pa_beta_l + pa_TSD_l * tpred_l[i] + pa_TSD2_l * (tpred_l[i] ** 2)
+        log(nb_pred_pl[i]) <- nb_intercept + nb_beta_pl + nb_TSD_pl * tpred_pl[i] + nb_TSD2_pl * (tpred_pl[i] ** 2)
+        log(nb_pred_l[i]) <- nb_intercept + nb_beta_l + nb_TSD_l * tpred_l[i] + nb_TSD2_l * (tpred_l[i] ** 2)
     }
-    for (i in 0:29){
-        logit(pa_pred_ph[i+1]) <- pa_intercept + pa_ph * phpred[i] + pa_ph2 * (phpred[i] ** 2)
-        log(nb_pred_ph[i+1]) <- nb_intercept + nb_ph * phpred[i] + nb_ph2 * (phpred[i] ** 2)
+    for (i in 1:29){
+        logit(pa_pred_ph[i]) <- pa_intercept + pa_ph * phpred[i] + pa_ph2 * (phpred[i] ** 2)
+        log(nb_pred_ph[i]) <- nb_intercept + nb_ph * phpred[i] + nb_ph2 * (phpred[i] ** 2)
     }
-    for (i in 0:100){
-        logit(pa_pred_emo[i+1]) <- pa_intercept + pa_emo * emopred[i] + pa_emo2 * (emopred[i] ** 2)
-        log(nb_pred_emo[i+1]) <- nb_intercept + nb_emo * emopred[i] + nb_emo2 * (emopred[i] ** 2)
+    for (i in 1:100){
+        logit(pa_pred_emo[i]) <- pa_intercept + pa_emo * emopred[i] + pa_emo2 * (emopred[i] ** 2)
+        log(nb_pred_emo[i]) <- nb_intercept + nb_emo * emopred[i] + nb_emo2 * (emopred[i] ** 2)
     }
 }

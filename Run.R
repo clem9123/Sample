@@ -86,9 +86,7 @@ Run_jags <- function(sp){
         model.file = "model.txt",
         data = jags_data,
         parameters.to.save = parameters,
-        n.chains = 4,
-        n.burnin = 1000,
-        n.iter = 2000)
+        n.chains = 4)
 
     # temps d'exécution
     Tex <- Sys.time() - begin
@@ -97,7 +95,7 @@ Run_jags <- function(sp){
 
     # 4. Save results
     #----------------
-    save(out, file = paste0("model",sp, ".RData"))
+    save(out, file = paste0("model_",sp, ".RData"))
     beep() # juste pour me dire que c'est fini
 }
 
@@ -111,5 +109,5 @@ library(boot)
 library(beepr)
 
 # Pour le tourner 
-# Run_jags("ACERUB")
-# environs 10min
+Run_jags("ABIBAL")
+# environs 30min

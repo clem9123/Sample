@@ -3,7 +3,8 @@
 - Run.R : Fichier avec la fonction qui permet de mettre en forme le model et 
 le lancer 
 - model.txt : Fichier avec le model en format texte
-- model_ABIBAL.RData : Fichier avec une sortie du model pour l'éspèce ABIBAL
+- model_ABIBAL.RData : Fichier avec une sortie du model pour l'éspèce ABIBAL 
+(l'objet dans ce fichier s'appelle `out`)
 - Analyse_sortie.R : Fichier avec juste 2 graphes pour voir quelques sorties
 
 # data
