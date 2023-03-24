@@ -66,19 +66,15 @@ Run_jags <- function(sp){
         # Perturbation
         "pa_beta_pl", "pa_TSD_pl", "pa_TSD2_pl",
         "pa_beta_l", "pa_TSD_l", "pa_TSD2_l",
-        # "pa_beta_b", "pa_TSD_b", "pa_TSD2_b",
         "pa_beta_o", "pa_TSD_o", "pa_TSD2_o",
         "nb_beta_pl", "nb_TSD_pl", "nb_TSD2_pl",
         "nb_beta_l", "nb_TSD_l", "nb_TSD2_l",
-        # "nb_beta_b", "nb_TSD_b", "nb_TSD2_b",
         "nb_beta_o", "nb_TSD_o", "nb_TSD2_o",
         # Random effect of placette
         "pa_tau", "nb_tau",
         # Predictions
         "pa_pred_ph", "pa_pred_emo", "pa_pred_pl", "pa_pred_l",
-        #"pa_pred_b", "pa_pred_o",
         "nb_pred_ph", "nb_pred_emo", "nb_pred_pl", "nb_pred_l"
-        #"nb_pred_b", "nb_pred_o"
     )
     
     # 3. Run model
