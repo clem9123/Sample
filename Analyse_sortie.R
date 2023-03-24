@@ -8,7 +8,7 @@ load("model_ABIBAL.RData")
 #-------------------------
 # LA SORTIE DE JAGS
 #-------------------------
-
+model_ABIBAL <- out
 print(model_ABIBAL)
 
 #-------------------------
